@@ -1,0 +1,16 @@
+<template [ngIf]="showPostStt">
+  <postDetail [post]="post"></postDetail>
+</template>
+
+<section id="listPost" class="container">
+  <div *ngFor="let post of listPosts">
+    <post [post]="post"></post>
+  </div>
+</section>
+
+<template [ngIf]="!listStatus">
+  <div class="noItem">
+    <img [src]="lolipop" alt="Không có bài viết nào trong mục này">
+    <h1>Chưa có bài viết nào!</h1>
+  </div>
+</template>

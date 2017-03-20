@@ -1,0 +1,35 @@
+  <div *ngIf="post?.better_featured_image.source_url" class="showPost">
+    <div class="nav">
+        <a [routerLink]="['/blog',idCategory,categorySlug]">
+            <div>
+                <img src="../../assets/img/ic_arrow_back.svg" alt=""> 
+                <span> Back</span>
+            </div>
+        </a>
+    </div>
+    <div class="bg">
+        <a [routerLink]="['/blog',idCategory,categorySlug]">
+            <div class="bgItem">
+                <img [src]="post.better_featured_image.source_url" [alt]="post.title.rendered">
+            </div>
+        </a>
+    </div>
+    <div class="content">
+        <div class="thumb">
+            <img [src]="post.better_featured_image.media_details.sizes.medium.source_url" [alt]="post.title.rendered">
+        </div>
+        <div class="title">
+            <h1>{{post.title.rendered}}</h1>
+            <span>{{post.date | date:"dd/MM/yyyy"}}</span> | Post by: <a [routerLink]="['/about']">Linh Hoo</a>
+        </div>
+        <div class="renderContent">
+            <span [innerHTML]="post.content.rendered | safeHtml"></span>
+            <div class="checkComment" *ngIf="!commentStt">
+                <a class="ShowComment" [routerLink]="" (click)="addDisqusScriptTag()">Xem comments</a>
+            </div>
+            <div *ngIf="commentStt" class="comment">
+                <div class="disqus_comment" id="disqus_thread"></div>
+            </div>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,213 @@
+html {
+  height: 100%;
+}
+body {
+    min-height: 100%;
+    margin: 0;
+    background-color: #FAFAFA;
+    font-family: 'Roboto', sans-serif;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: #00796b
+}
+
+a:hover, a:active {
+    color: #4db6ac
+}
+.shadow {
+    -webkit-box-shadow: 0px 1px 16px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 16px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 16px -4px rgba(0,0,0,0.75);
+}
+.scrolly-hidebar {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+.scrolly-hidebar::-webkit-scrollbar { width: 0 !important }
+/*header */
+header {
+    margin: 0px;
+    width: 100%;
+    height: 320px;
+    background-color: #4db6ac; 
+    background-image: url('./img/icon-seamless.png');
+}
+header .about-trigger {
+    margin-top: 20px;
+    text-align: center;
+}
+header .about-trigger img {
+    display: block;
+    width: 200px;
+    margin: auto
+}
+header .about-trigger h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 0px;
+    margin-top: 20px;
+}
+header .about-trigger h2 {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0px;
+    color: rgba(255,255,255,0.8);
+}
+nav {
+    width: 100%;
+    height: 62px;
+    background-color: #26a69a;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.19);
+    box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.19);
+}
+nav a:link,nav a:visited  {
+    display: block;
+    float: left;
+    height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+nav a:hover,nav a:active {
+    height: 42px;
+    background-color: #009688;
+}
+nav a span {
+    margin: 20px;
+}
+nav .active {
+    height: 39px !important;
+    border-bottom: solid 4px #fff; 
+}
+nav a img {
+    height: 20px;
+}
+.fixed {
+    position: fixed;
+    z-index: 696969;
+    top: 0;
+}
+/*header nav*/
+.headerNav {
+    text-align: right;
+    margin-right: 30px;
+}
+.headerNav a {
+    display: inline-block;
+    padding: 20px 15px;
+    font-size: 18px;
+    color: #fff;
+    transition: background-color 0.6s;
+}
+.headerNav a:hover, .headerNav a:active {
+    background-color: rgba(0,0,0,0.2)
+}
+.headerNav img {
+    width: 20px;
+}
+.headerNavActive {
+    border-bottom: solid 2px #fff;
+}
+/*Card*/
+.container{
+    margin: 30px 10px;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+}
+.noItem img {
+    display: block;
+    width: 200px;
+    margin: 60px auto;
+}
+.noItem h1 {
+    text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+    .container{
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .container{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+@media only screen and (max-width: 620px) {
+    .container{
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    nav a:link,nav a:visited  {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .headerNav {
+        margin-right: 15px;
+    }
+    .headerNav a {
+        display: inline-block;
+        padding: 20px 5px;
+        font-size: 18px;
+        color: #fff;
+        transition: 0.6s;
+    }
+    header .about-trigger img {
+        display: block;
+        width: 150px;
+        margin: auto
+    }
+}
+
+/*post detail*/
+.showPost .content * {
+    max-width: 100%;
+}
+.showPost .content .renderContent {
+    line-height: 1.5;
+}
+/*text content style*/
+.showPost .content .renderContent blockquote {
+    display: block;
+    border-radius: 4px;
+    background-color: #cfd8dc;
+    margin: 5px;
+    padding: 5px;
+}
+.showPost .content .renderContent .alignnone {
+    display: block;
+    margin: 5px;
+}
+.showPost .content .renderContent .aligncenter {
+    display: block;
+    margin: 5px;
+    margin: auto;
+}
+.showPost .content .renderContent .alignleft {
+    display: block;
+    margin: 5px;
+    float: left;
+}
+.showPost .content .renderContent .alignright {
+    display: block;
+    margin: 5px;
+    float: right;
+}

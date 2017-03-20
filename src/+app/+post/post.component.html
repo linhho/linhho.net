@@ -1,0 +1,10 @@
+<template [ngIf]="post?.better_featured_image.media_details.sizes.medium.source_url">
+  <a class="card" [routerLink]="['/blog', post?.categories[0], post.id,post.slug ]">
+    <figure>
+      <img [src]="post.better_featured_image.media_details.sizes.medium.source_url" [alt]="post.title.rendered">
+      <figcaption>
+        {{post.title.rendered}}
+      </figcaption>
+    </figure>
+  </a>
+</template>

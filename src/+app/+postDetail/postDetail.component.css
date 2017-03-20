@@ -1,0 +1,205 @@
+a:link, a:visited {
+    text-decoration: none;
+    color: #000
+}
+
+
+a:hover, a:active {
+    color: #4db6ac
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes content {
+    0%   {left:0px; top:60vh; opacity: 0;}
+    100% {left:0px; top:0px; opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes content {
+    0%   {left:0px; top:60vh; opacity: 0}
+    100% {left:0px; top:0px; opacity: 1}
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes thumb {
+    0%   {position:absolute; left:50vw; top:50vh; opacity: 0;}
+    100% {position: relative; left:0px; top:0px; opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes thumb {
+    0%   {position:absolute; left:50vw; top:50vh; opacity: 0;}
+    100% {position: relative; left:0px; top:0px; opacity: 1;}
+}
+
+/*Post view*/
+.showPost {
+    position: fixed;
+    z-index: 96969696;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.showPost .nav {
+    position: fixed;
+    z-index: 969696969;
+    top:0;
+    width: 100%;
+    height: 62px;
+    background-color: #80cbc4;
+    -webkit-box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.19);
+    box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.19);
+}
+/*.showPost .nav a {
+    display: block;
+}*/
+.showPost .nav a div {
+    width: 980px;
+    margin: auto;
+    padding: 20px;
+}
+.showPost .nav a img {
+    display: block;
+    float: left;
+}
+.showPost .nav a span {
+    display: block;
+    margin-bottom: 3px;
+    color: #fff;
+    font-size: 24px;
+}
+.showPost .bg {
+    position: fixed;
+    z-index: 96969696;
+    width: 100%;
+    height: 100%;
+}
+.showPost .bgItem {
+    width: 100%; 
+    height: 100%; 
+    background-color: #4db6ac;
+    transition: 0.5s;
+}
+.showPost .bg img {
+    min-height:100%;
+    min-width:100%;
+    height:auto;
+    width:auto;
+    opacity: 0.4;
+    transition: 0.5s;
+}
+.showPost a:hover .bgItem, .showPost a:active .bgItem {
+    opacity: 0.6;
+}
+.showPost .content {
+    position: relative;
+    z-index: 96969697;
+    background-color: #fff;
+    width: 980px;
+    margin: auto;
+    margin-bottom: 0px;
+    margin-top: 200px;
+    padding-bottom: 30px;
+    -webkit-box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.19);
+    box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.19);
+    /* animation */
+    -webkit-animation-name: content; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    /*-webkit-animation-delay: 2s;*/ /* Safari 4.0 - 8.0 */
+    animation-name: content;
+    animation-duration: 1s;
+    /*animation-delay: 2s;*/
+}
+
+.showPost .content .renderContent {
+    clear: both;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.showPost .content .renderContent * {
+    max-width: 100%;
+}
+
+.showPost .content .thumb {
+    margin-left: 50px;
+    margin-right: 50px;
+    float: left;
+    width: 300px;
+    /* animation */
+    -webkit-animation-name: thumb; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-name: thumb;
+    animation-duration: 0.5s;
+}
+.showPost .content .thumb img {
+    position: relative;
+    top: -120px;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.19);
+    box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.19);
+}
+.showPost .content .title {
+    margin-left: 350px;
+    padding-top: 50px;
+}
+.showPost .content .title h1 {
+    margin: 0 50px;
+    font-size: 2rem;
+}
+.checkComment {
+    text-align: center;
+    margin: 50px 0;
+}
+.ShowComment {
+    background-color: #ef5350;
+    color: #fff;
+    padding: 20px 30px;
+    transition: 1s;
+}
+.ShowComment:link, .ShowComment:visited {
+    color: #fff;
+}
+.ShowComment:hover, .ShowComment:active {
+    background-color: #fff;
+    border: solid 3px #ef5350;
+    color: #ef5350;
+}
+@media only screen and (max-width: 980px) {
+    .showPost .content {
+        width: 100%;
+        -webkit-box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.19);
+        -moz-box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.19);
+        box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.19);
+    }
+    .showPost .nav a div {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .showPost .content {
+        margin-top: 162px
+    }
+    .showPost .content .thumb {
+        float: none;
+        width: 50%;
+        margin-left: 20px;
+    }
+    .showPost .content .thumb img {
+        top: -50px;
+    }
+    .showPost .content .title {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 0;
+        margin-bottom: 50px;
+    }
+    .showPost .content .renderContent {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

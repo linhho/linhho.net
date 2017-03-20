@@ -1,0 +1,45 @@
+.aboutContainer {
+    width: 980px;
+    margin: 200px auto;
+}
+
+.aboutThumb {
+    float: left;
+    max-width: 250px;
+    width: 50%;
+    margin-right: 50px;
+}
+.aboutThumb img {
+    position: relative;
+    top: -150px;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.19);
+    box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.19);
+}
+.aboutContent {
+    padding: 50px;
+    margin-bottom: 50px;
+    -webkit-box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.19);
+    box-shadow: 0px -2px 7px 0px rgba(0,0,0,0.19);
+}
+.content h1 {
+    margin: 0px;
+}
+@media only screen and (max-width: 980px) {
+    .aboutContainer {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .aboutThumb {
+        float: none
+    }
+    .content {
+        position: relative;
+        top: -100px;
+        line-height: 1.5;
+    }
+}
