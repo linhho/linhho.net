@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent, XLargeDirective } from './app.component';
 import { AboutModule } from './+about/about.module';
+import { SearchModule } from './+search/search.module';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { AboutModule } from './+about/about.module';
     SharedModule,
     HomeModule,
     AboutModule,
+    SearchModule,
     AppRoutingModule
   ]
 })

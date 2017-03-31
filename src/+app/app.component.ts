@@ -28,6 +28,7 @@ export class XLargeDirective {
             <div class="headerNav">
                 <a [routerLink]="['blog']" routerLinkActive="headerNavActive">BLOG</a>
                 <a [routerLink]="['about']" routerLinkActive="headerNavActive">ABOUT</a>
+                <a [routerLink]="['search']" routerLinkActive="headerNavActive"><img [src]="searchIcon" alt="Search"></a>
                 <a [href]="faceLink" target="_blank"><img [src]="faceIcon" alt="facebook"></a>
                 <a [href]="instaLink" target="_blank"><img [src]="instaIcon" alt="instagram"></a>
             </div>
@@ -47,7 +48,9 @@ export class XLargeDirective {
             </div>
         </div>
     </nav>
+    <div id="webContainer">
       <router-outlet></router-outlet>
+    </div>
   `
 })
 export class AppComponent {
@@ -57,6 +60,7 @@ export class AppComponent {
   public logo = "../assets/logo-2.png";
   public faceIcon = "../assets/img/facebook.svg";
   public instaIcon = "../assets/img/instagram.svg";
+  public searchIcon = "../assets/img/search.svg";
   public navIsFixed: boolean = false;
   constructor(
       public model: ModelService
@@ -75,7 +79,7 @@ export class AppComponent {
   @HostListener("window:scroll", [])
   onWindowScroll() {
     let number = document.getElementsByTagName("body")[0].scrollTop;
-    let container = document.getElementById("listPost");
+    let container = document.getElementById("webContainer");
     if (number > 320) {
       this.navIsFixed = true;
       container.style.marginTop = 72+'px';

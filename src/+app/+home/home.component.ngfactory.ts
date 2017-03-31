@@ -115,7 +115,7 @@ class _View_HomeComponent0 extends import1.AppView<import0.HomeComponent> {
     this._TemplateRef_0_5 = new import16.TemplateRef_(this._appEl_0,viewFactory_HomeComponent1);
     this._NgIf_0_6 = new import14.Wrapper_NgIf(this._appEl_0.vcRef,this._TemplateRef_0_5);
     this._text_1 = this.renderer.createText(parentRenderNode,'\n\n',(null as any));
-    this._el_2 = import4.createRenderElement(this.renderer,parentRenderNode,'section',new import4.InlineArray4(4,'class','container','id','listPost'),(null as any));
+    this._el_2 = import4.createRenderElement(this.renderer,parentRenderNode,'section',new import4.InlineArray2(2,'class','container'),(null as any));
     this._text_3 = this.renderer.createText(this._el_2,'\n  ',(null as any));
     this._anchor_4 = this.renderer.createTemplateAnchor(this._el_2,(null as any));
     this._appEl_4 = new import3.AppElement(4,2,this,this._anchor_4);

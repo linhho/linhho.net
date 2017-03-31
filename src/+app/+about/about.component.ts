@@ -15,7 +15,7 @@ export class SafeHtmlPipe implements PipeTransform  {
   changeDetection: ChangeDetectionStrategy.Default,
   encapsulation: ViewEncapsulation.Emulated,
   selector: 'about',
-  styleUrls: ['about.component.css'],
+  styleUrls: ['./about.component.css'],
   templateUrl: './about.component.html'
 })
 export class AboutComponent {

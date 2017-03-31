@@ -1,0 +1,14 @@
+<div class="search-container">
+    <input class="searchInput" type="text" placeholder="Search + Enter" [(ngModel)]="keyword" (keyup.enter)="getItems()">
+    <template [ngIf]="!listStatus">
+    <div class="noItem">
+        <img [src]="lolipop" alt="Không có bài viết nào trong mục này">
+    </div>
+    </template>
+    <div class="search-content">
+        <div class="card" *ngFor="let post of listItems">
+            <a [routerLink]="['/blog', post?.categories[0], post.id,post.slug ]"><h1>{{post.title.rendered}}</h1></a>
+            <span>{{post.date | date:"dd/MM/yyyy"}}</span>
+        </div>
+    </div>
+</div>

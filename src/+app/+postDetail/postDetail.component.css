@@ -198,6 +198,9 @@ a:hover, a:active {
         padding-top: 0;
         margin-bottom: 50px;
     }
+    .showPost .content .title h1 {
+        margin: 0;
+    }
     .showPost .content .renderContent {
         margin-left: 20px;
         margin-right: 20px;
